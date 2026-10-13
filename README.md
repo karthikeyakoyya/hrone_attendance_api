@@ -14,3 +14,5 @@ uvicorn app.main:app --port 8000
 ## Notes
 - `moving_avg_7d` is the mean of the exact daily rates in the window, rounded half up to 4 decimals once at the end (R8 rounds reported numbers). Averaging the already rounded `attendance_rate` values would differ in the last digit on some rows.
 - The explain endpoint and the real endpoints share the same query builders, and each query uses an index hint so the plan is an `IXSCAN`.
+
+**I used an AI assistant as a reference while building this, and I ran and tested the code myself.**
